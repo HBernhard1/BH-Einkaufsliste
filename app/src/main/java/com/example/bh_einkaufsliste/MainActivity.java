@@ -164,15 +164,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSprechenClick(View v)
     {
-        hideSoftInput();
-
         Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
         i.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bitte sprechen sie jetzt");
 
         startActivityForResult(i, 100);
-
+        hideSoftInput();
     }
 
     public void onSpeichernClick(View v)
