@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sprechen"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="onSprechenClick"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="true"
+            android:focusable="true"
+            app:icon="@android:drawable/ic_btn_speak_now" />
+
+        <EditText
+            android:id="@+id/artikel"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:text="" />
+
+        <Button
+            android:id="@+id/speichern"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="onSpeichernClick"
+            android:focusable="true"
+            app:icon="@android:drawable/ic_input_add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/einkaufsListe"
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="10dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+</LinearLayout>
+
